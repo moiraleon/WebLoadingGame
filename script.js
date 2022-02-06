@@ -18,10 +18,10 @@ var checkEndGame = setInterval(function(){
 
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
-    if(blockLeft < 20 && blockLeft > 0 && characterTop >= 130){
+    if(blockLeft < 45 && blockLeft > 0 && characterTop >= 130){
         block.style.animation = "none";
         block.style.display = "none";
-        if (confirm('Game Over\n Replay?')) {
+        if (confirm('Game Over\n \nReplay?')) {
             window.location.reload();
             console.log('Replayed Game');
           } else {

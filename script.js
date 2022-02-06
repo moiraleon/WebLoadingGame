@@ -21,6 +21,11 @@ var checkEndGame = setInterval(function(){
     if(blockLeft < 20 && blockLeft > 0 && characterTop >= 130){
         block.style.animation = "none";
         block.style.display = "none";
-        alert("Game Over");
+        if (confirm('Game Over\n Replay?')) {
+            window.location.reload();
+            console.log('Replayed Game');
+          } else {
+            console.log('Game Ended');
+          }
     }
 }, 10);
